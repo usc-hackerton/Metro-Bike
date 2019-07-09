@@ -27,3 +27,6 @@ Plot should be showing some kind of rankings.
 ## 시간대별 대여현황
 
 슬라이더를 옮기면 시간대별로 변화 보여주기
+
+1. 가장 대여가 활발한 지역 TOP 10
+2. 가장 ~ 한 지역.
