@@ -24,6 +24,8 @@ __Using slidebar to elapse time__
 
 Plot should be showing some kind of rankings.
 
+## 전체 대여 랭킹
+
 ## 시간대별 대여현황
 
 슬라이더를 옮기면 시간대별로 변화 보여주기
