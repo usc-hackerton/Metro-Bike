@@ -22,3 +22,5 @@ __Using slidebar to elapse time__
 # Plot
 
 Plot should be showing some kind of rankings.
+
+## 시간대별 대여현황
