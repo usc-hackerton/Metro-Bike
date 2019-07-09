@@ -1,0 +1,24 @@
+# Heat map
+
+Heat map consists of two colors
+- Red : rent > return
+- Blue : rent < return
+
+## Total heat map
+
+Total heat map regardless of time or location.
+There should be three types of such.
+
+1. all
+2. rent > return
+3. rent < return
+
+## Time specific heat map
+
+Heat map for each times.
+
+__Using slidebar to elapse time__
+
+# Plot
+
+Plot should be showing some kind of rankings.
