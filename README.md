@@ -1,7 +1,7 @@
 # LA Metro Bike Analysis Project docs
 
 <div align="center">
-  <img src="https://assets-news-bcdn-ll.dailyhunt.in/cmd/resize/400x400_60/fetchdata13/images/b1/07/50/b107507c1e5fea8392bbe3a464fc2557.jpghttps://www.tensorflow.org/images/tf_logo_social.png">
+  <img src="https://11ka1d3b35pv1aah0c3m9ced-wpengine.netdna-ssl.com/wp-content/themes/lametro/library/images/logo.png?v=2">
 </div>
 
 -----------------
