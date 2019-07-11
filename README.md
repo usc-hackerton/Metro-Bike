@@ -31,6 +31,9 @@ Code review of our project is carried out everytime.
 
 _If there are any errors or problems in certain parts of the project, such as README or codes, please send e-mail to tajanboy0359@naver.com._
 
+# Where we can use the data
+
+
 # How to contribute project by sequence
 **Evaluation and Suggestion of Efficiency of Metro Bike Stations by Visualization of Data (Introduction Stage)**
 - Visualization of the current bike stations expressed as efficient.
