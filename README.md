@@ -15,8 +15,8 @@ Title : **Efficient Station Configuration and Management, Route Recommendations 
 - E-mail :
 - Role : Participated in the overall project and managed data processing, conclusions drawn and Github.
 
-**문태근 ` `**
-- E-mail :
+**문태근 ` TaeGeun Moon`**
+- E-mail : ahn_v3@naver.com
 - Role : Participated in overall projects and participated in data collection, conclusions, and visualization.
 
 **박동찬 Park DongChan `ParkDongChan`**
