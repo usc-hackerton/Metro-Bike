@@ -10,7 +10,7 @@
 
 # Team members
 
-**김경태 ` ` (Team Leader)** 
+**김경태 ` `** 
 - E-mail :
 - Role : Participated in the overall project and managed data processing, conclusions drawn and Github.
 
