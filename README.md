@@ -23,8 +23,8 @@ Title : **Efficient Station Configuration and Management, Route Recommendations 
 - E-mail : tajanboy0359@naver.com
 - Role : Participated in overall projects and participated in planning, data visualization, and Github management.
 
-**우준혁  ``**
-- E-mail : 
+**우준혁  Woo JunHyuck`WooJunHyuck`**
+- E-mail : wjh0470@cau.ac.kr
 - Role : Participated in overall projects and participated in data collection and visualization and the creation of service app.
 
 Code review of our project is carried out everytime.  
