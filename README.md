@@ -32,10 +32,17 @@ Code review of our project is carried out everytime.
 _If there are any errors or problems in certain parts of the project, such as README or codes, please send e-mail to tajanboy0359@naver.com._
 
 # How to contribute by sequence
-**   **<br>
--
--
+**Evaluation and Suggestion of Efficiency of Metro Bike Stations by Visualization of Data (Introduction Stage)**
+- Visualization of the current bike stations expressed as efficient.
 
+**Visualization and Suggestion based on the Bike Stations for Service (Development Stage)**
+- Expression of Heat map visualization according to the degree of rent and return by bike stations.
+- Ranking(Plot) after determining the degree of rental of bicycle stations according to traffic volume
+  - Propose removal of places deemed inappropriate by figures and set up bike stations in traffic centers.
+- Visualization of the rental status for each stations by time zone and a suggestion of a Bike Station to allow room for traffic congestion.
+
+**Presentation of service based on visualization information of current bike system (Service Stage)**
+- Presentation of significant data visualization and recommendation of bike path considering traffic volume and bike station space.
 
 
 
