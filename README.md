@@ -40,10 +40,10 @@ _If there are any errors or problems in certain parts of the project, such as RE
 - Visualization of the current bike stations expressed as efficient.
 
 **Visualization and Suggestion based on the Bike Stations for Service (Development Stage)**
-- Expression of Heat map visualization according to the degree of rent and return by bike stations.
+- Expression of Heat map visualization according to the degree of rent and return, all by bike stations. (using slider)
 - Ranking(Plot) after determining the degree of rental of bicycle stations according to traffic volume
   - Propose removal of places deemed inappropriate by figures and set up bike stations in traffic centers.
-- Visualization of the rental status for each stations by time zone and a suggestion of a Bike Station to allow room for traffic congestion.
+- Visualization of the rental status for each stations by time zone and a suggestion of a Bike Station to allow space for traffic congestion. (using slider)
 
 **Presentation of service based on visualization information of current bike system (Service Stage)**
 - Presentation of significant data visualization and recommendation of bike path considering traffic volume and bike station space.
