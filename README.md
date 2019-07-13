@@ -37,17 +37,16 @@ _If there are any errors or problems in certain parts of the project, such as RE
 
 # How to contribute project by sequence
 **Evaluation and Suggestion of Efficiency of Metro Bike Stations by Visualization of Data (Introduction Stage)**
-- Visualization of the current bike stations expressed as efficient.
+- Visualization of the current bike stations (return / rent) expressed as efficient by heatmap and color points.
 
 **Visualization and Suggestion based on the Bike Stations for Service (Development Stage)**
-- Expression of Heat map visualization according to the degree of rent and return, all by bike stations (using slider).
+- Expression of visualization according to the 'share metro bike' data in LA opne data.
 - Ranking(Plot) after determining the degree of rental of bicycle stations according to traffic volume
   - Propose removal of places deemed inappropriate by figures and set up bike stations in traffic centers.
-- Visualization of the rental status for each stations by time zone and a suggestion of a Bike Station to allow space for traffic congestion (using slider).
+- Visualization of the rental status for each stations by time zone and a suggestion of a Bike Station to allow space by using esri.
 
 **Presentation of service based on visualization information of current bike system (Service Stage)**
-- Presentation of significant data visualization and recommendation of bike path considering traffic volume and bike station space.
-
+- Presentation of significant data visualization and recommendation of bike station location considering the bike station space.
 
 
 ## License
