@@ -40,7 +40,7 @@ _If there are any errors or problems in certain parts of the project, such as RE
 - Visualization of the current bike stations (return / rent) expressed as efficient by heatmap and color points.
 
 **Visualization and Suggestion based on the Bike Stations for Service (Development Stage)**
-- Expression of visualization according to the 'share metro bike' data in LA opne data.
+- Expression of visualization according to the 'share metro bike' data in LA open data.
 - Ranking(Map) after determining the degree of rental of bicycle stations according to traffic volume
   - Propose removal of places deemed inappropriate by figures and set up bike stations in traffic centers.
 - Visualization of the rental status for each stations by time zone and a suggestion of a Bike Station to allow space by using esri.
