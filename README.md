@@ -11,19 +11,19 @@ Title : **Efficient Station Configuration and Management, Route Recommendations 
 
 # Team members
 
-**김경태 KyeongTae Kim ` David Kim `** 
+**김경태 KyeongTae Kim `David Kim `** 
 - E-mail : bluesalt752@gmail.com
 - Role : Participated in the overall project and managed data processing, conclusions drawn and Github.
 
-**문태근 TaeGeun Moon ` TaeGeun`**
+**문태근 TaeGeun Moon `TaeGeun`**
 - E-mail : ahn_v3@naver.com
 - Role : Participated in overall projects and participated in data collection, conclusions, and visualization.
 
-**박동찬 Park DongChan `ParkDongChan`**
+**박동찬 DongChan Park `ParkDongChan`**
 - E-mail : tajanboy0359@naver.com
 - Role : Participated in overall projects and participated in planning, data visualization, and Github management.
 
-**우준혁  Woo JunHyuck`WooJunHyuck`**
+**우준혁 JunHyuck Woo `WooJunHyuck`**
 - E-mail : wjh0470@cau.ac.kr
 - Role : Participated in overall projects and participated in data collection and visualization and the creation of service app.
 
