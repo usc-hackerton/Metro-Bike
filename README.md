@@ -33,7 +33,7 @@ _If there are any errors or problems in certain parts of the project, such as RE
 
 # Where we can use the data
 1. [LA Open Data Website](https://data.lacity.org/)
-2. [LA Metro Bike Website](https://bikeshare.metro.net/suggest-a-location/)
+2. [LA Metro Bike Website](https://bikeshare.metro.net/about/data/)
 
 # How to contribute project by sequence
 **Evaluation and Suggestion of Efficiency of Metro Bike Stations by Visualization of Data (Introduction Stage)**
