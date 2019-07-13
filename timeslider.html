@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Create a time slider</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<style>
+.map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.map-overlay .map-overlay-inner {
+    background-color: #fff;
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.map-overlay h2 {
+    line-height: 24px;
+    display: block;
+    margin: 0 0 10px;
+}
+
+.map-overlay .legend .bar {
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(to right, #ff0000, #cccccc,#0ce80c);
+}
+
+.map-overlay input {
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    cursor: ew-resize;
+}
+</style>
+
+<div id='map'></div>
+
+<div class='map-overlay top'>
+    <div class='map-overlay-inner'>
+        <h2>Bike return & rent ratio in 2018-q4</h2>
+        <label id='hour'></label>
+        <input id='slider' type='range' min='0' max='23' step='1' value='0' />
+    </div>
+    <div class='map-overlay-inner'>
+        <div id='legend' class='legend'>
+            <div style="display:flex;">
+                <span>0.0</span>
+                <span style="flex:1;"></span>
+                <span>1.0</span>
+            </div>
+            <div class='bar'></div>
+            <div>Return / Total (m)</div>
+        </div>
+    </div>
+</div>
+
+<script src='https://npmcdn.com/csv2geojson@latest/csv2geojson.js'></script>
+<script src='//d3js.org/d3.v3.min.js' charset='utf-8'></script>
+<script>
+
+function makeGeoJSON(csvData) {
+    csv2geojson.csv2geojson(csvData, {
+        latfield: 'latitude',
+        lonfield: 'longitude',
+        delimiter: ','
+    }, function(err, data) {
+        map.on('load', function () {
+
+            map.addLayer({
+                'id': 'airports',
+                'type': 'symbol',
+                'source': {
+                    'type': 'geojson',
+                    'data': data
+                },
+                'layout': {
+                    "icon-image": "marker-15"
+                },
+                'paint': {}
+            });
+        });    
+    });
+}
+
+mapboxgl.accessToken = 'pk.eyJ1IjoieG9ybXM5ODciLCJhIjoiY2p5MGZidTU4MDJsNDNubzk1Y2J5ZGczMCJ9.GjJpXITnxkhmD1NwwPbl4A';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v10',
+    center: [31.4606, 20.7927],
+    zoom: 0.5
+});
+
+var hours = Array(24).fill().map((x,i)=>i);
+var previousLayer = null;
+
+function filterBy(hour) {
+    if (previousLayer) {
+        map.setLayoutProperty(previousLayer, 'visibility', 'none');
+    }
+    map.setLayoutProperty(`ratio_${hour}`, 'visibility', 'visible');
+    previousLayer = `ratio_${hour}`;
+
+    // Set the label to the month
+    document.getElementById('hour').textContent = hours[hour];
+}
+
+map.on('load', function() {
+
+    // Data courtesy of http://earthquake.usgs.gov/
+    // Query for significant earthquakes in 2015 URL request looked like this:
+    // http://earthquake.usgs.gov/fdsnws/event/1/query
+    //    ?format=geojson
+    //    &starttime=2015-01-01
+    //    &endtime=2015-12-31
+    //    &minmagnitude=6'
+    //
+    // Here we're using d3 to help us make the ajax request but you can use
+    // Any request method (library or otherwise) you wish.
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/data/clean/2018-q4-station.csv');
+    xhr.send();
+    xhr.onload = function() {
+        if (xhr.status != 200) { // analyze HTTP status of the response
+            alert(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
+        } else { // show the result
+            // alert(`Done, got ${xhr.response.length} bytes`); // responseText is the server
+            // console.log(xhr.response);
+            var csvData = xhr.response;
+            csv2geojson.csv2geojson(csvData, {
+                latfield: 'lat',
+                lonfield: 'lon',
+                delimiter: ','
+            }, function(err, data) {
+                if (err) throw err;
+                console.log(data)
+                // Create a month property value based on time
+                // used to filter against.
+                data.features = data.features.map(function(d) {
+                    d.properties.ratio = parseFloat(d.properties.ratio);
+                    d.properties.total = parseFloat(d.properties.total);
+                    for (var i = 0; i < 24; i++) {
+                        d.properties[`ratio_${i}`] = parseFloat(d.properties[`ratio_${i}`]);
+                        d.properties[`total_${i}`] = parseFloat(d.properties[`total_${i}`]);
+                    }
+                    return d;
+                });
+
+                map.addSource('bikes', {
+                    'type': 'geojson',
+                    data: data
+                });
+                var fields = Array(24).fill().map((x,i)=>`ratio_${i}`);
+                fields.forEach((v,i)=>{
+                    map.addLayer({
+                        'id': v,
+                        'type': 'circle',
+                        'source': 'bikes',
+                        'layout': {
+                            'visibility': 'none',
+                        },
+                        'paint': {
+                            'circle-color': [
+                                'interpolate',
+                                ['linear'],
+                                ['get', v],
+                                0, '#ff0000',
+                                0.5, '#cccccc',
+                                1, '#0ce80c'
+                            ],
+                            'circle-opacity': 0.9,
+                            'circle-radius': [
+                                'interpolate',
+                                ['linear'],
+                                ['get', `total_${i}`],
+                                5, 4,
+                                50, 10
+                            ]
+                        }
+                    });
+                })
+                
+
+                // Set filter to first month of the year
+                // 0 = January
+                filterBy(0);
+
+                document.getElementById('slider').addEventListener('input', function(e) {
+                    var hour = parseInt(e.target.value, 10);
+                    filterBy(hour);
+                });
+            })
+        }
+    };
+
+});
+</script>
+
+</body>
+</html>
