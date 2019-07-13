@@ -1,6 +1,6 @@
 # LA Metro Bike Analysis Project docs
 
-Title : **Efficient Station Configuration and Management, Route Recommendations through Data Visualization of LA Metro Bike**
+Title : **Efficient Station Configuration and Management, verification of effective station location through Data Visualization of LA Metro Bike**
 <div align="center">
   <img src="https://11ka1d3b35pv1aah0c3m9ced-wpengine.netdna-ssl.com/wp-content/themes/lametro/library/images/logo.png?v=2">
 </div>
@@ -41,7 +41,6 @@ _If there are any errors or problems in certain parts of the project, such as RE
 
 **Visualization and Suggestion based on the Bike Stations for Service (Development Stage)**
 - Expression of visualization according to the 'share metro bike' data in LA open data.
-- Ranking(Map) after determining the degree of rental of bicycle stations according to traffic volume
   - Propose removal of places deemed inappropriate by figures and set up bike stations in traffic centers.
 - Visualization of the rental status for each stations by time zone and a suggestion of a Bike Station to allow space by using esri.
 
