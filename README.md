@@ -11,8 +11,8 @@ Title : **Efficient Station Configuration and Management, Route Recommendations 
 
 # Team members
 
-**김경태 ` `** 
-- E-mail :
+**김경태 KyeongTae Kim ` David Kim `** 
+- E-mail : bluesalt752@gmail.com
 - Role : Participated in the overall project and managed data processing, conclusions drawn and Github.
 
 **문태근 TaeGeun Moon ` TaeGeun`**
