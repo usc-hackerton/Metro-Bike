@@ -36,7 +36,7 @@ _If there are any errors or problems in certain parts of the project, such as RE
 2. [LA Metro Bike Website](https://bikeshare.metro.net/about/data/)
 
 # How to contribute project by sequence
-**Evaluation and Suggestion of Efficiency of Metro Bike Stations by Visualization of Data (Introduction Stage)**
+**Evaluation and Suggestion of Efficiency of Metro Bike Stations (Introduction Stage)**
 - Visualization of the current bike stations (return / rent) expressed as efficient by heatmap and color points.
 
 **Visualization and Suggestion based on the Bike Stations for Service (Development Stage)**
@@ -44,7 +44,7 @@ _If there are any errors or problems in certain parts of the project, such as RE
   - Propose removal of places deemed inappropriate by figures and set up bike stations in traffic centers.
 - Visualization of the rental status for each stations by time zone and a suggestion of a Bike Station to allow space by using esri.
 
-**Presentation of service based on visualization information of current bike system (Service Stage)**
+**Presentation of service based on visualization information (Service Stage)**
 - Presentation of significant data visualization and recommendation of bike station location considering the bike station space.
 
 
