@@ -37,7 +37,7 @@ _If there are any errors or problems in certain parts of the project, such as RE
 
 # How to contribute project by sequence
 **Evaluation and Suggestion of Efficiency of Metro Bike Stations (Introduction Stage)**
-- Visualization of the current bike stations (return / rent) expressed as efficient by heatmap and color points.
+- Visualization of the current bike stations (ratio : return+1 / total+2) expressed as efficient by heatmap and color points.
 
 **Visualization and Suggestion based on the Bike Stations for Service (Development Stage)**
 - Visualization of LA metro bike
