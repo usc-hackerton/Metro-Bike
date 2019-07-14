@@ -9,7 +9,7 @@ Title : **Efficient Station Configuration and Management, verifying adequateness
 
 **LA Metro Bike Analysis Project** is an open source analysis project for verifying an efficiency of a current rental location of metro bikes and improving a relocation policy of metro bikes.
 
-**[Details of projects](https://drive.google.com/drive/folders/1O6096Wp-CyQbjy-V9YuqRBFSXgz2D8TH?usp=sharing)**
+**Files in Google Drive : [Details of projects](https://drive.google.com/drive/folders/1O6096Wp-CyQbjy-V9YuqRBFSXgz2D8TH?usp=sharing)**
 
 # Team members
 
