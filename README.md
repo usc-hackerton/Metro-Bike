@@ -1,6 +1,6 @@
 # LA Metro Bike Analysis Project docs
 
-Title : **Efficient Station Configuration and Management, verification of effective station location through Data Visualization of LA Metro Bike**
+Title : **Efficient Station Configuration and Management, verifying adequateness of bike station's location through Data Visualization of LA Metro Bike**
 <div align="center">
   <img src="https://11ka1d3b35pv1aah0c3m9ced-wpengine.netdna-ssl.com/wp-content/themes/lametro/library/images/logo.png?v=2">
 </div>
